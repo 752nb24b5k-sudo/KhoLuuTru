@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport"
+        content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no" />
+  <title>Khung cố định 9:16 - 9Pay</title>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      background: #0f172a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      color: white;
+      font-family: system-ui, -apple-system, "Helvetica Neue", Arial;
+    }
+
+    /* Lớp xử lý vùng an toàn notch iPhone */
+    .safe {
+      width: 100vw;
+      height: 100dvh;
+      padding-top: env(safe-area-inset-top);
+      padding-bottom: env(safe-area-inset-bottom);
+      padding-left: env(safe-area-inset-left);
+      padding-right: env(safe-area-inset-right);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Khung chính giữ tỉ lệ 9:16 */
+    .frame {
+      aspect-ratio: 9 / 16;
+      width: 90vw;
+      max-height: 90vh;
+      background: #000;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 6px 30px rgba(0,0,0,0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Iframe full khung */
+    #myFrame {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Nếu iPhone nhỏ thì giảm kích cỡ khung */
+    @media (max-height: 700px) {
+      .frame {
+        width: 95vw;
+        max-height: 95vh;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="safe">
+    <div class="frame">
+      <!-- 🔹 Code của bạn đặt ở đây -->
+      <iframe id="myFrame" src="https://j68bet.asia/register?ref=REF0000005092""></iframe>
+    </div>
+  </div>
+</body>
+</html>
